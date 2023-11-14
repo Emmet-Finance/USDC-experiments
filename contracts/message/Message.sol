@@ -3,7 +3,7 @@
 // Copyright (c) 2022, Circle Internet Financial Limited.
 pragma solidity >0.7.6;
 
-import {TypedMemView} from "./TypedMemView.sol";
+import {TypedMemView} from "../math/TypedMemView.sol";
 
 /**
  * @title Message Library

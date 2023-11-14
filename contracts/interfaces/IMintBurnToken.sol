@@ -1,5 +1,7 @@
-
- pragma solidity >0.7.6;
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2016 Smart Contract Solutions, Inc. 2016
+// Copyright (c) 2022, Circle Internet Financial Limited.
+pragma solidity >0.7.6;
 
 import {IERC20} from "./IERC20.sol";
 

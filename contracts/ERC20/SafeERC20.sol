@@ -3,9 +3,9 @@
 // Copyright (c) 2022, Circle Internet Financial Limited.
 pragma solidity >0.7.6;
 
-import {IERC20} from "./IERC20.sol";
-import {Address} from "./Address.sol";
-import {SafeMath} from "./SafeMath.sol";
+import {IERC20} from "../interfaces/IERC20.sol";
+import {Address} from "../utils/Address.sol";
+import {SafeMath} from "../math/SafeMath.sol";
 
 /**
  * @title SafeERC20

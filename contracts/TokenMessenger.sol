@@ -3,14 +3,17 @@
 // Copyright (c) 2022, Circle Internet Financial Limited.
 pragma solidity >0.7.6;
 
-import {IMintBurnToken} from "./IMintBurnToken.sol";
-import {ITokenMinter} from "./ITokenMinter.sol";
-import {IMessageHandler} from "./IMessageHandler.sol";
-import {Rescuable} from "./Rescuable.sol";
-import {TypedMemView} from "./TypedMemView.sol";
-import {IMessageTransmitter} from "./IMessageTransmitter.sol";
-import {BurnMessage} from "./BurnMessage.sol";
-import {Message} from "./Message.sol";
+// ----- Interfaces -----
+import {IMintBurnToken} from "./interfaces/IMintBurnToken.sol";
+import {ITokenMinter} from "./interfaces/ITokenMinter.sol";
+import {IMessageHandler} from "./interfaces/IMessageHandler.sol";
+import {IMessageTransmitter} from "./interfaces/IMessageTransmitter.sol";
+// ----- Utils -----
+import {Rescuable} from "./utils/Rescuable.sol";
+import {TypedMemView} from "./math/TypedMemView.sol";
+// ----- Message -----
+import {BurnMessage} from "./message/BurnMessage.sol";
+import {Message} from "./message/Message.sol";
 
 /**
  * @title TokenMessenger

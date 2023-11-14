@@ -3,9 +3,9 @@
 // Copyright (c) 2022, Circle Internet Financial Limited.
 pragma solidity >0.7.6;
 
-import {IERC20} from "./IERC20.sol";
+import {IERC20} from "../interfaces/IERC20.sol";
 import {Ownable2Step} from "./Ownable2Step.sol";
-import {SafeERC20} from "./SafeERC20.sol";
+import {SafeERC20} from "../ERC20/SafeERC20.sol";
 
 /**
  * @notice Base contract which allows children to rescue ERC20 locked in their contract.
