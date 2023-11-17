@@ -1,5 +1,9 @@
 # USDC Experiments
 
+## Token Faucet
+
+https://usdcfaucet.com/
+
 ## Initializing the project
 
 1. Initializing Yarn
