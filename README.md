@@ -54,24 +54,32 @@ Roles:
 |:-:|:-|
 |0|Goerli|
 |1|Avalanche|
-|2||
+|2|Optimism|
 |3|Arbitrum|
-|4||
-|5|NEAR ?|
-|6||
-|7||
+|4|?|
+|5|? Non-EVM|
+|6|Base|
+|7|Polygon|
 
-## Local Token Contracts (USDC)
+## Local Testnet Token Contracts (USDC)
 
 ```ts
 export const DEFAULT_DECIMALS = 6 // USDC
 ```
 
+<!-- https://www.circle.com/en/multichain-usdc -->
+
 |Chain|Address|
 |:-:|:-:|
 |Goerli|[0x07865c6E87B9F70255377e024ace6630C1Eaa37F](https://goerli.etherscan.io/address/0x07865c6E87B9F70255377e024ace6630C1Eaa37F)|
-|Avalanche|[0x5425890298aed601595a70AB815c96711a31Bc65]()|
-|Arbitrum|[0xfd064a18f3bf249cf1f87fc203e90d8f650f2d63]()|
+|Avalanche|[0x5425890298aed601595a70AB815c96711a31Bc65](https://testnet.snowtrace.io/token/0x5425890298aed601595a70ab815c96711a31bc65)|
+|Arbitrum|[0xfd064a18f3bf249cf1f87fc203e90d8f650f2d63](https://goerli.arbiscan.io/token/0xfd064a18f3bf249cf1f87fc203e90d8f650f2d63)|
+|Base|[0xF175520C52418dfE19C8098071a252da48Cd1C19](https://goerli.basescan.org/token/0xf175520c52418dfe19c8098071a252da48cd1c19)|
+|Optimism|[0xe05606174bac4A6364B31bd0eCA4bf4dD368f8C6](https://goerli-optimism.etherscan.io/token/0xe05606174bac4a6364b31bd0eca4bf4dd368f8c6)|
+|Polygon|[0x9999f7Fea5938fD3b1E26A12c3f2fb024e194f97](https://mumbai.polygonscan.com/token/0x9999f7fea5938fd3b1e26a12c3f2fb024e194f97)|
+|Stellar|[USDC-GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5](https://stellar.expert/explorer/testnet/asset/USDC-GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5)|
+|TRON|[TFGBSrddCjLJAwuryZ9DUxtEmKv13BPjnh](https://shasta.tronscan.org/#/contract/TFGBSrddCjLJAwuryZ9DUxtEmKv13BPjnh)|
+
 
 ## Local Message Transmitter
 
@@ -90,8 +98,13 @@ export const DEFAULT_DECIMALS = 6 // USDC
 
 ## Local Token Messenger
 
-|Chain|Address|
-|:-:|:-|
-|Goerli|[0xd0c3da58f55358142b8d3e06c1c30c5c6114efe8]()|
-|Avalanche|[0xeb08f243e5d3fcff26a9e38ae5520a669f4019d0]()|
-|Arbitrum|[0x12dcfd3fe2e9eac2859fd1ed86d2ab8c5a2f9352]()|
+|#|Chain|Address|
+|:-:|:-:|:-|
+|0|Goerli|[0xD0C3DA58F55358142B8D3E06C1C30C5C6114EFE8]()|
+|1|Avalanche|[0xeb08f243e5d3fcff26a9e38ae5520a669f4019d0]()|
+|2|Optimism|[0x23A04D5935ED8BC8E3EB78DB3541F0ABFB001C6E](https://goerli-optimism.etherscan.io/address/0x23a04d5935ed8bc8e3eb78db3541f0abfb001c6e)|
+|3|Arbitrum|[0x12dcfd3fe2e9eac2859fd1ed86d2ab8c5a2f9352]()|
+|4|?|[0x57D4EAF1091577A6B7D121202AFBD2808134F117]()|
+|5|?|[A65FC943419A5AD590042FD67C9791FD015ACF53A54CC823EDB8FF81B9ED722E]()|
+|6|Base|[0x877B8E8C9E2383077809787ED6F279CE01CB4CC8](https://goerli.basescan.org/address/0x877b8e8c9e2383077809787ed6f279ce01cb4cc8)|
+|7|Polygon|[0x9F3B8679C73C2FEF8B59B4F3444D4E156FB70AA5]()|
