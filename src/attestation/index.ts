@@ -4,8 +4,8 @@ import {
     Attestation,
     AttestationResponse,
     AttestationStatus,
-    IrisApiUrl
 } from './types';
+import { geBaseURL } from '../utils'
 
 /**
  * Extracts the response's message & status into an object
@@ -16,17 +16,6 @@ const mapAttestation = (attestationResponse: AttestationResponse) => ({
     message: attestationResponse.attestation,
     status: attestationResponse.status,
 });
-
-/**
- * Provides the testnet or mainnet base URL
- * @param isTestnet boolean flag whether we're on testnet
- * @returns testnet or mainnet base URL
- */
-const geBaseURL = (isTestnet: boolean = false): string => {
-    return isTestnet
-        ? `${IrisApiUrl.testnet}/attestations`
-        : `${IrisApiUrl.mainnet}/attestations`;
-}
 
 export const getAttestation = async (
     isTestnet: boolean,

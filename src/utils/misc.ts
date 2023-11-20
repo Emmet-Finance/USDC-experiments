@@ -1,3 +1,4 @@
+import { IrisApiUrl } from '../constants';
 
 /**
  * Returns the gas value plus a margin for unexpected or variable gas costs
@@ -25,4 +26,15 @@ export const numToHex = (num: number): string => {
 export function copyToClipboard(value: string) {
     /* Copy the text inside the text field */
     void navigator.clipboard.writeText(value)
+}
+
+/**
+ * Provides the testnet or mainnet base URL
+ * @param isTestnet boolean flag whether we're on testnet
+ * @returns testnet or mainnet base URL
+ */
+export const geBaseURL = (isTestnet: boolean = false): string => {
+    return isTestnet
+        ? `${IrisApiUrl.testnet}/attestations`
+        : `${IrisApiUrl.mainnet}/attestations`;
 }

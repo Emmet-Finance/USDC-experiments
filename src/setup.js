@@ -7,15 +7,20 @@ const usdcAbi = require('./abis/Usdc.json');
 const messageTransmitterAbi = require('./abis/cctp/MessageTransmitter.json');
 
 const {
+    // Transaction-specific variables
+    IS_TESTNET,
     AMOUNT,
+    USER_SK,
+    EVM_SK,
+    RECIPIENT_ADDRESS,
+    FROM_CHAIN,
+    TO_CHAIN,
+
+    // To be replaced with constants
     AVAX_DESTINATION_DOMAIN,
-    AVAX_PRIVATE_KEY,
     AVAX_TESTNET_RPC,
     ETH_DESTINATION_DOMAIN,
     ETH_TESTNET_RPC,
-    ETH_PRIVATE_KEY,
-    RECIPIENT_ADDRESS,
-    // Constants
     ETH_TOKEN_MESSENGER_CONTRACT_ADDRESS,
     USDC_ETH_CONTRACT_ADDRESS,
     ETH_MESSAGE_CONTRACT_ADDRESS,
@@ -32,11 +37,11 @@ const setup = async () => {
     const web3 = new Web3(ETH_TESTNET_RPC);
 
     // Add AVAX private key used for signing transactions
-    const avaxSigner = web3.eth.accounts.privateKeyToAccount(AVAX_PRIVATE_KEY);
+    const avaxSigner = web3.eth.accounts.privateKeyToAccount(EVM_SK);
     web3.eth.accounts.wallet.add(avaxSigner);
 
     // Add ETH private key used for signing transactions
-    const ethSigner = web3.eth.accounts.privateKeyToAccount(ETH_PRIVATE_KEY);
+    const ethSigner = web3.eth.accounts.privateKeyToAccount(USER_SK);
     web3.eth.accounts.wallet.add(ethSigner);
 
     // initialize contracts using address and ABI
@@ -48,6 +53,7 @@ const setup = async () => {
     const destinationAddressInBytes32 = await ethMessageContract.methods.addressToBytes32(mintRecipient).call();
 
     return {
+        // Transaction-specific variables
         amount,
         avaxMessageTransmitterContract,
         avaxSigner,

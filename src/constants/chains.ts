@@ -87,6 +87,15 @@ export enum DestinationDomain {
     POL = 7
 }
 
+export const CHAIN_ID_TO_DESTINATION_DOMAIN = {
+    [SupportedChainIdHex.ARB_GOERLI]: DestinationDomain.ARB,
+    [SupportedChainIdHex.AVAX_FUJI]: DestinationDomain.AVAX,
+    [SupportedChainIdHex.BASE_GOERLI]: DestinationDomain.BASE,
+    [SupportedChainIdHex.ETH_GOERLI]: DestinationDomain.ETH,
+    [SupportedChainIdHex.OP_GOERLI]: DestinationDomain.OP,
+    [SupportedChainIdHex.POL_MUMABI]: DestinationDomain.POL,
+}
+
 // https://eips.ethereum.org/EIPS/eip-3085
 interface AddEthereumChainParameter {
     chainId: string
@@ -172,4 +181,13 @@ export const CHAIN_ID_HEXES_TO_PARAMETERS: ChainIdToChainParameters = {
     [SupportedChainIdHex.ETH_GOERLI]: ETH_GOERLI,
     [SupportedChainIdHex.OP_GOERLI]: OP_GOERLI,
     [SupportedChainIdHex.POL_MUMABI]: POL_MUMABI,
+}
+
+export const CHAIN_ID_DECIMAL_TO_PARAMETERS: {[key: number]: AddEthereumChainParameter} = {
+    [SupportedChainId.ARB_GOERLI]: ARB_GOERLI,
+    [SupportedChainId.AVAX_FUJI]: AVAX_FUJI,
+    [SupportedChainId.BASE_GOERLI]: BASE_GOERLI,
+    [SupportedChainId.ETH_GOERLI]: ETH_GOERLI,
+    [SupportedChainId.OP_GOERLI]: OP_GOERLI,
+    [SupportedChainId.POL_MUMABI]: POL_MUMABI,
 }
